@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/business_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/btn_clean"
+                android:text="@string/business" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/entertainment_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/btn_clean"
+                android:text="@string/entertainment" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/general_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/btn_clean"
+                android:text="@string/general" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/health_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/btn_clean"
+                android:text="@string/health" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/science_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/btn_clean"
+                android:text="@string/science" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sports_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/btn_clean"
+                android:text="@string/sports" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/technology_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/btn_clean"
+                android:text="@string/technology" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    </LinearLayout>
+
+</layout>

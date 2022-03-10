@@ -9,7 +9,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.synergygfs.news.R
 import com.synergygfs.news.databinding.ActivityMainBinding
 
-class MainActivity: AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

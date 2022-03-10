@@ -2,10 +2,25 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/tagsFragment">
+    app:startDestination="@id/topicsFragment">
 
     <fragment
-        android:id="@+id/tagsFragment"
-        android:name="com.synergygfs.news.ui.fragments.TagsFragment"
-        android:label="Tags" />
+        android:id="@+id/topicsFragment"
+        android:name="com.synergygfs.news.ui.fragments.TopicsFragment"
+        android:label="Topics">
+        <action
+            android:id="@+id/action_topicsFragment_to_articlesFragment"
+            app:destination="@id/articlesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.synergygfs.news.ui.fragments.ArticlesFragment"
+        android:label="Articles">
+        <argument
+            android:name="topic"
+            app:argType="string"
+            android:defaultValue="all" />
+    </fragment>
 </navigation>
