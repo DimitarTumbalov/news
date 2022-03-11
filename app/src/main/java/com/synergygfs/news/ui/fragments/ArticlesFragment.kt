@@ -28,7 +28,7 @@ class ArticlesFragment : Fragment(), ItemViewListeners {
 
     private val args: ArticlesFragmentArgs by navArgs()
 
-    var adapter: ArticlesAdapter? = null
+    private var adapter: ArticlesAdapter? = null
 
     private var articlesCollection = Vector<Article>()
 

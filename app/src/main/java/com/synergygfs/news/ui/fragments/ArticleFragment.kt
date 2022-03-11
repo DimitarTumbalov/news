@@ -43,7 +43,7 @@ class ArticleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // If fragment is article isn't recreated, increase the read articles count
+        // If fragment isn't recreated, increase the read articles count
         if (savedInstanceState == null) {
             requireContext().let {
                 var count = UiUtils.getSharedPrefs(it, "articles_read_count")?.toInt() ?: 0
@@ -132,7 +132,6 @@ class ArticleFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         menu.clear()
-
         super.onCreateOptionsMenu(menu, inflater)
     }
 }
