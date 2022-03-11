@@ -28,5 +28,15 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         toolbar.setupWithNavController(navController, appBarConfiguration)
+
+        navController.addOnDestinationChangedListener { _, destination, args ->
+            title = when (destination.id) {
+                R.id.articlesFragment -> {
+                    args?.getString("topic")
+                }
+                R.id.articleFragment -> getString(R.string.article)
+                else -> getString(R.string.topics)
+            }
+        }
     }
 }

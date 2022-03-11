@@ -1,6 +1,5 @@
 package com.synergygfs.news.net
 
-import android.util.Log
 import com.google.gson.Gson
 import com.synergygfs.news.Constants
 import com.synergygfs.news.data.Article
@@ -10,7 +9,6 @@ import okhttp3.Request
 import java.util.*
 import java.util.concurrent.Executors
 
-
 object API {
     private val client = OkHttpClient()
 
@@ -18,21 +16,46 @@ object API {
 
     private val gson = Gson()
 
-    private const val baseUrl = "https://newsapi.org/v2"
+    private const val baseUrl = "https://newsapi.org/v2/top-headlines"
 
-    fun getArticlesByTopic(topic: String, callback: (Vector<Article>) -> Unit) {
+    fun getArticles(
+        language: String? = null,
+        topic: String? = null,
+        callback: (Vector<Article>) -> Unit
+    ) {
         pool.submit {
+            val url = StringBuilder()
+            url.append(baseUrl)
+
+            if (language != null) {
+                url.append("?language=$language")
+
+                if (topic != null)
+                    url.append("&category=$topic")
+            } else if (topic != null) {
+                url.append("?category=$topic")
+            }
+
+            var articles = Vector<Article>()
+
             val request = Request.Builder()
                 .addHeader("Authorization", Constants.API_KEY)
-                .url("$baseUrl/top-headlines?country=bg")
+                .url(url.toString())
                 .build()
+
             val response = client.newCall(request).execute()
+            response.body!!.charStream().use { reader ->
+                try {
+                    val articlesData: Articles? = gson.fromJson(reader, Articles::class.java)
 
-            val jsonString: String = response.body?.string().toString()
-
-            val articles = gson.fromJson(jsonString, Articles::class.java)
-            Log.d("test", articles.articles.size.toString())
-            callback(articles.articles)
+                    articlesData?.articles?.let {
+                        articles = it
+                    }
+                } catch (i: Exception) {
+                } finally {
+                    callback(articles)
+                }
+            }
         }
     }
 }

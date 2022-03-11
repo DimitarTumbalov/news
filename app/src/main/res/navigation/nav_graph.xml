@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/topicsFragment">
 
     <fragment
         android:id="@+id/topicsFragment"
         android:name="com.synergygfs.news.ui.fragments.TopicsFragment"
-        android:label="Topics">
+        tools:layout="@layout/fragment_topics">
         <action
             android:id="@+id/action_topicsFragment_to_articlesFragment"
             app:destination="@id/articlesFragment"
@@ -17,10 +17,22 @@
     <fragment
         android:id="@+id/articlesFragment"
         android:name="com.synergygfs.news.ui.fragments.ArticlesFragment"
-        android:label="Articles">
+        tools:layout="@layout/fragment_articles">
         <argument
             android:name="topic"
-            app:argType="string"
-            android:defaultValue="all" />
+            android:defaultValue="general"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_articlesFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.synergygfs.news.ui.fragments.ArticleFragment">
+        <argument
+            android:name="article"
+            app:argType="com.synergygfs.news.data.Article" />
     </fragment>
 </navigation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/all"
+        android:title="@string/all_languages"
+        android:titleCondensed="all" />
+    <item
+        android:title="@string/bulgarian"
+        android:titleCondensed="bg" />
+    <item
+        android:title="@string/german"
+        android:titleCondensed="de" />
+    <item
+        android:title="@string/italian"
+        android:titleCondensed="it" />
+    <item
+        android:title="@string/japanese"
+        android:titleCondensed="jp" />
+    <item
+        android:title="@string/russian"
+        android:titleCondensed="ru" />
+    <item
+        android:title="@string/turkish"
+        android:titleCondensed="tr" />
+</menu>

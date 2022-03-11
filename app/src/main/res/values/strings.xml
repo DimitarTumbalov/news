@@ -8,4 +8,19 @@
     <string name="sports">Sports</string>
     <string name="technology">Technology</string>
     <string name="thumbnail">thumbnail</string>
+    <string name="no_available_articles">No available articles</string>
+    <string name="topics">Topics</string>
+    <string name="open_in_web">Open in Web</string>
+    <string name="article">Article</string>
+    <string name="all_languages">All languages</string>
+    <string name="bulgarian">Bulgarian</string>
+    <string name="german">German</string>
+    <string name="italian">Italian</string>
+    <string name="japanese">Japanese</string>
+    <string name="russian">Russian</string>
+    <string name="turkish">Turkish</string>
+    <string name="languages">Languages</string>
+    <string name="read_articles">Total number of read articles: %1$s</string>
+    <string name="author">Author: %1$s</string>
+    <string name="source">Source: %1$s</string>
 </resources>

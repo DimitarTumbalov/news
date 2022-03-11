@@ -3,68 +3,118 @@
 
     <data />
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
-        android:orientation="vertical">
+        android:background="@color/background_secondary"
+        android:columnCount="2"
+        android:useDefaultMargins="true"
+        android:verticalSpacing="10dp">
 
-        <com.google.android.material.button.MaterialButtonToggleGroup
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/read_articles_counter"
+            style="@style/p_bold"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="1"
+            android:background="@color/primaryVariant"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/white" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/business_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/btn_clean"
-                android:text="@string/business" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/general_btn"
+            style="@style/btn_clean"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/primary"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/general"
+            android:textColor="@color/white" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/entertainment_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/btn_clean"
-                android:text="@string/entertainment" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/business_btn"
+            style="@style/btn_clean"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/primary"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/business"
+            android:textColor="@color/white" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/general_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/btn_clean"
-                android:text="@string/general" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/entertainment_btn"
+            style="@style/btn_clean"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/primary"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/entertainment"
+            android:textColor="@color/white" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/health_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/btn_clean"
-                android:text="@string/health" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/health_btn"
+            style="@style/btn_clean"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/primary"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/health"
+            android:textColor="@color/white" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/science_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/btn_clean"
-                android:text="@string/science" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/science_btn"
+            style="@style/btn_clean"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/primary"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/science"
+            android:textColor="@color/white" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/sports_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/btn_clean"
-                android:text="@string/sports" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sports_btn"
+            style="@style/btn_clean"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/primary"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/sports"
+            android:textColor="@color/white" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/technology_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/btn_clean"
-                android:text="@string/technology" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/technology_btn"
+            style="@style/btn_clean"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:backgroundTint="@color/primary"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/technology"
+            android:textColor="@color/white" />
 
-        </com.google.android.material.button.MaterialButtonToggleGroup>
-
-    </LinearLayout>
+    </GridLayout>
 
 </layout>
