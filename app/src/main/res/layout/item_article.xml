@@ -6,7 +6,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:background="@color/background"
         android:translationZ="2dp">
@@ -20,17 +20,18 @@
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_max="200dp" />
+            app:layout_constraintWidth_percent="0.4" />
 
         <TextView
             android:id="@+id/title"
-            style="@style/h6"
+            style="@style/p_bold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ellipsize="end"
-            android:lines="3"
+            android:lines="2"
             android:paddingHorizontal="10dp"
             android:paddingVertical="5dp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/thumbnail"

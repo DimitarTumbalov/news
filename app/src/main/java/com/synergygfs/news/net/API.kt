@@ -1,7 +1,7 @@
 package com.synergygfs.news.net
 
 import com.google.gson.Gson
-import com.synergygfs.news.Constants
+import com.synergygfs.news.BuildConfig
 import com.synergygfs.news.data.Article
 import com.synergygfs.news.data.Articles
 import okhttp3.OkHttpClient
@@ -39,7 +39,7 @@ object API {
             var articles = Vector<Article>()
 
             val request = Request.Builder()
-                .addHeader("Authorization", Constants.API_KEY)
+                .addHeader("Authorization", BuildConfig.NEWS_API_KEY)
                 .url(url.toString())
                 .build()
 

@@ -14,7 +14,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
-            android:paddingTop="10dp" />
+            android:paddingTop="10dp"
+            android:paddingBottom="14dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/loading_screen"

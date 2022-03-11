@@ -20,12 +20,6 @@
         <item name="android:textColor">@color/text_high</item>
     </style>
 
-    <style name="h6">
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/text_high</item>
-    </style>
-
     <style name="p">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/text_high</item>
